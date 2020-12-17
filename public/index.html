@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="json.js"></script>
+    </head>
+
+    <body>
+        <h1>Série 4 Pedro Henrique Ferreira Cavalcante</h1>
+
+		<h2>1)Permite a exibição de arquivos estáticos.</h2>
+
+        
+		<h2>2)Permite a realização de upload de arquivo enviado através do comando POST.</h2>		
+		  <form action="http://localhost:3000/ImportarArquivo" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Enviar">
+        </form>
+		
+		
+		
+        <h2>3)Permite a realização de upload de arquivos enviados a partir do comando GET</h2>
+        <form action="http://localhost:3000/getFormulario" method="GET">
+            Jogo: <input type="text" name="jogo"><br><br>
+            Plataforma: <input type="text" name="plataforma"><br><br>
+            Preço: <input type="numeric" name="preco"><br><br>
+            <input type="submit" value="Submeter">
+        </form>
+
+		<h2>4)Suporta uma aplicação AJAX, que ao click de mouse em um botão, acessa um conjunto de dados em JSON e os exibe no lugar de um parágrafo em uma página HTML.</h2>		
+		
+		<button id="mostrarDadosJson">Mostrar Json</button>
+        <p id="JSON_FILE"> </p>
+
+
+    </body>
+</html>
